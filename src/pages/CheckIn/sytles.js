@@ -4,6 +4,7 @@ import Button from '../../components/Button';
 export const Container = styled.SafeAreaView`
   flex: 1;
   padding: 20px;
+  margin: 20px;
 `;
 
 export const Title = styled.Text`
@@ -48,5 +49,11 @@ export const CheckinNumber = styled.Text`
 
 export const CheckinDate = styled.Text`
   color: #777;
+  font-size: 16px;
+`;
+
+export const Text = styled.Text`
+  color: #333;
+  font-weight: bold;
   font-size: 16px;
 `;
