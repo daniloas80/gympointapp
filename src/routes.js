@@ -11,6 +11,8 @@ import logo from '~/assets/logo_mini.png';
 import SignIn from './pages/SignIn';
 import CheckIn from './pages/CheckIn';
 import HelpOrders from './pages/HelpOrders';
+import askHelp from './pages/HelpOrders/askHelp';
+import readAnswer from './pages/HelpOrders/readAnswer';
 
 export default (signedIn = false) =>
   createAppContainer(
@@ -60,11 +62,13 @@ export default (signedIn = false) =>
               screen: createStackNavigator(
                 {
                   HelpOrders,
-                  // AskHelp,
-                  // ReadAnswer,
+                  askHelp,
+                  readAnswer,
                 },
                 {
                   defaultNavigationOptions: {
+                    headerBackTitle: 'Voltar',
+                    headerBackTitleVisible: false,
                     headerTitle: (
                       <Image
                         style={{
@@ -81,8 +85,11 @@ export default (signedIn = false) =>
                       display: 'flex',
                       justifyContent: 'center',
                       position: 'absolute',
-                      top: 0,
                       left: 0,
+                      flex: 1,
+                      width: '100%',
+                      flexDirection: 'row',
+                      alignItems: 'center',
                     },
                   },
                 }

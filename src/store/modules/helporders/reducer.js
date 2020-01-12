@@ -10,22 +10,17 @@ const INITIAL_STATE = {
 export default function helporders(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
-      case '@helporders/ANSWER_HELPORDERS': {
+      case '@helporders/QUESTION_HELPORDERS_REQUEST': {
         draft.helporders = action.payload.data;
         draft.loading = true;
         break;
       }
-      case '@helporders/ANSWER_HELPORDERS_REQUEST': {
-        draft.helporders = action.payload.data;
-        draft.loading = true;
-        break;
-      }
-      case '@helporders/HELPORDERS_SUCCESS': {
+      case '@helporders/QUESTION_HELPORDERS_SUCCESS': {
         draft.helporders = action.payload.data;
         draft.loading = false;
         break;
       }
-      case '@helporders/HELPORDERS_FAILURE': {
+      case '@helporders/QUESITON_HELPORDERS_FAILURE': {
         draft.loading = false;
         break;
       }

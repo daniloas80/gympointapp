@@ -6,11 +6,12 @@ import checkin from './checkins/reducer';
 // import user from './user/reducer';
 // import student from './students/reducer';
 // import plan from './plans/reducer';
-// import helporders from './helporders/reducer';
+import helporders from './helporders/reducer';
 
 export default combineReducers({
   auth,
   checkin,
+  helporders,
   // user,
   // student,
   // plan,

@@ -1,28 +1,20 @@
 // função que efetivamente vai para o saga para fazer o update no banco
-export function answerHelpOrders(data, id, student_id) {
+export function questionHelpOrdersRequest(data, id) {
   return {
-    type: '@helporders/ANSWER_HELPORDERS',
-    payload: { data, id, student_id },
+    type: '@helporders/QUESTION_HELPORDERS_REQUEST',
+    payload: { data, id },
   };
 }
 
-// função que uso para carragegar o state ao clicar no botão editar da listagem de alunos
-export function answerHelpOrdersRequest(student_id, id) {
+export function questionHelpOrdersSuccess(data) {
   return {
-    type: '@helporders/ANSWER_HELPORDERS_REQUEST',
-    payload: { student_id, id },
-  };
-}
-
-export function answerHelpOrdersSuccess(data) {
-  return {
-    type: '@helporders/HELPORDERS_SUCCESS',
+    type: '@helporders/QUESTION_HELPORDERS_SUCCESS',
     payload: data,
   };
 }
 
-export function answerHelpOrdersFailure() {
+export function questionHelpOrdersFailure() {
   return {
-    type: '@helporders/HELPORDERS_FAILURE',
+    type: '@helporders/QUESITON_HELPORDERS_FAILURE',
   };
 }
